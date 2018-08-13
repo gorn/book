@@ -236,14 +236,14 @@ method, which are repeated here in Listing 11-5. Let’s put this code in the
 ```rust
 # fn main() {}
 #[derive(Debug)]
-pub struct Rectangle {
-    length: u32,
+struct Rectangle {
     width: u32,
+    height: u32,
 }
 
 impl Rectangle {
     pub fn can_hold(&self, other: &Rectangle) -> bool {
-        self.length > other.length && self.width > other.width
+        self.width > other.width && self.height > other.height
     }
 }
 ```
